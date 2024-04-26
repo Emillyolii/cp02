@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cp02
+spec:
+  selector:
+    app: cp02
+  type: LoadBalancer

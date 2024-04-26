@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cp02
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: cp02
+  template:
+    metadata:
+      labels:
+        app: cp02
+    spec:
+      containers:
+      - name: cp02
+        command: ["python", "/script.py"]
+        image: emillyoliiv930/cp02
+
